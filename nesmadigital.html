@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesmer Digital Marketing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="Homestyle.css" >
+    <link rel="stylesheet" href="aboutstyles.css" >
+    <link rel="stylesheet" href="servicesstyle.css">
+    <link rel="stylesheet" href="contactstyles.css">
+    <link rel="stylesheet" href="ourworkstyle.css">
+</head>
+<body>
+    <!-- Camera Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="camera-loader">
+            <div class="camera-body"></div>
+            <div class="camera-lens"></div>
+            <div class="shutter"></div>
+        </div>
+        <p class="loading-text">Capturing your digital journey...</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+           <a href="nesmadigital.html"><h2 class="logo"> Nesma Digital</h2></a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="nesmadigital.html" class="nav-link active">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="ourwork.html" class="nav-link">Our Works</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <br>
+            <br>
+            <h1 class="hero-title">Transform Your Digital Presence</h1>
+            <p class="hero-subtitle">We create powerful visuals and digital experiences that make every moment unforgettable.</p>
+            
+            <div class="services-text">
+                <p><strong>We Cover All Special Events:</strong><br><br>
+                💍 Weddings &nbsp;&nbsp; 🎉 Birthdays &nbsp;&nbsp; 🎓 Graduations<br>
+                👶 Baby Showers &nbsp;&nbsp; 💼 Corporate Events &nbsp;&nbsp; 💃 Anniversaries</p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="services-grid">
+                <div class="service-card" style="--delay: 0.2s">
+                    <h3>Social Media Marketing</h3>
+                    <p>Boost engagement and grow your audience with tailored strategies.</p>
+                </div>
+                <div class="service-card" style="--delay: 0.4s">
+                    <h3>Event Videography</h3>
+                    <p>Cinematic visuals for weddings, birthdays, and corporate events.</p>
+                </div>
+                <div class="service-card" style="--delay: 0.6s">
+                    <h3>Brand Identity Design</h3>
+                    <p>Memorable, cohesive visuals that tell your brand story.</p>
+                </div>
+            </div>
+            
+            <a href="services.html" class="cta-btn">Explore Services</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Mesmer Digital. Crafting unforgettable visual stories.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navMenu = document.getElementById('navMenu');
+
+            if (mobileMenuBtn && navMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                });
+
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('active');
+                    });
+                });
+            }
+
+            // Hide loading screen after delay
+            setTimeout(() => {
+                const loadingScreen = document.getElementById('loadingScreen');
+                loadingScreen.style.opacity = '0';
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 600);
+            }, 2500);
+        });
+    </script>
+</body>
+</html>
